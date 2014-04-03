@@ -38,10 +38,16 @@ public class Print {
 	}
 	
 	public static <T> void collectionPrint(Collection<T> c) {
-		T [] a = null;
-		c.toArray(a);
-		for (int i=0;i<a.length;i++) {
-			System.out.print(a[i]+" ");
+//		T[] a= null;
+//		T [] a = (T[]) new Object[10];
+//		c.toArray(a);
+//		for (int i=0;i<a.length;i++) {
+//			System.out.print(a[i]+" ");
+//		}
+		//不能泛型数组实例化
+		
+		for(T e:c) {
+			System.out.print(e+" ");
 		}
 		System.out.println();
 	}
